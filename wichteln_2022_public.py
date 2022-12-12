@@ -5,20 +5,15 @@ import random
 import base64
 import uuid
 
-wichtler_liste = ["A",
-                  "B",
-                  "C",
-                  "D",
-                  "E",
-                  "F",
-                  "G"
-                  ]
+wichtler_liste = ["A", "B", "C", "D", "E", "F", "G"]
 
 forbidden = [
              ("A", "G"),
              ("B", "D"),
              ("C", "E"),
              ]
+             
+             
 print("Wichtler:\n", wichtler_liste)
 print("Verbotene Kombinationen:\n", forbidden, "\n\n\n")
 
@@ -36,7 +31,7 @@ part_one = """<!doctype html>
 <body>
 
 <div id='start' class='content'>
-    <h1><span lang=en>Weichnachtswichteln</span></h1></div>
+    <h1><span lang=de>Weichnachtswichteln</span></h1></div>
 
 <div id='one' class='content'>
     <h2>Hallo """
@@ -64,10 +59,12 @@ part_seven = """</ul>
     """
 
 for kombi in forbidden:
-    part_seven += "<li>" + str(kombi) + "</li>\n"
+    part_seven += f"<li> {kombi[0]} ⇋ {kombi[1]} </li>\n"
 
 part_eight = """
     </ul>
+    
+    <p>Der Quellcode ist hier abgelegt <a href="https://github.com/chainsawbeaver/weihnachtswichteln/blob/main/wichteln_2022_public.py">github.com</a></p>
     </div>
 
 
